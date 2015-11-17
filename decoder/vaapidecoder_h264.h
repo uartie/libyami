@@ -358,6 +358,8 @@ class VaapiDecoderH264:public VaapiDecoderBase {
                                   const SliceHeaderPtr& sliceHdr);
 
   private:
+    friend class VaapiDecoderH264Test;
+
     PicturePtr m_currentPicture;
     VaapiDPBManager::Ptr m_DPBManager;
     H264NalParser m_parser;
