@@ -98,6 +98,10 @@ unittest_SOURCES = \
 	$(top_builddir)/common/unittest_main.cpp \
 	$(NULL)
 
+if BUILD_H264_ENCODER
+unittest_SOURCES += vaapiencoder_h264_unittest.cpp
+endif
+
 unittest_LDFLAGS = \
 	$(GTEST_LDFLAGS) \
 	$(NULL)
