@@ -50,6 +50,8 @@ protected:
     virtual bool isBusy() { return false;};
 
 private:
+    friend class VaapiEncoderJpegTest;
+
     Encode_Status encodePicture(const PicturePtr &);
     bool addSliceHeaders (const PicturePtr&) const;
     bool fill(VAEncPictureParameterBufferJPEG * picParam, const PicturePtr &, const SurfacePtr &) const;

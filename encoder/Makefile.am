@@ -106,6 +106,10 @@ if BUILD_H265_DECODER
 unittest_SOURCES += vaapiencoder_hevc_unittest.cpp
 endif
 
+if BUILD_JPEG_ENCODER
+unittest_SOURCES += vaapiencoder_jpeg_unittest.cpp
+endif
+
 unittest_LDFLAGS = \
 	$(GTEST_LDFLAGS) \
 	$(NULL)
