@@ -110,6 +110,10 @@ if BUILD_JPEG_ENCODER
 unittest_SOURCES += vaapiencoder_jpeg_unittest.cpp
 endif
 
+if BUILD_VP8_DECODER
+unittest_SOURCES += vaapiencoder_vp8_unittest.cpp
+endif
+
 unittest_LDFLAGS = \
 	$(GTEST_LDFLAGS) \
 	$(NULL)
