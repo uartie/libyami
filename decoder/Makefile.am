@@ -123,6 +123,10 @@ if BUILD_H265_DECODER
 unittest_SOURCES += vaapidecoder_h265_unittest.cpp
 endif
 
+if BUILD_JPEG_DECODER
+unittest_SOURCES += vaapidecoder_jpeg_unittest.cpp
+endif
+
 unittest_LDFLAGS = \
 	$(GTEST_LDFLAGS) \
 	$(NULL)
