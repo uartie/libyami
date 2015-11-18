@@ -46,6 +46,8 @@ class VaapiDecoderVP9:public VaapiDecoderBase {
     virtual Decode_Status decode(VideoDecodeBuffer *);
 
   private:
+    friend class VaapiDecoderVP9Test;
+
     Decode_Status ensureContext(const Vp9FrameHdr* );
     Decode_Status decode(const uint8_t* data, uint32_t size, uint64_t timeStamp);
     Decode_Status decode(const Vp9FrameHdr* hdr, const uint8_t* data, uint32_t size, uint64_t timeStamp);

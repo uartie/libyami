@@ -131,6 +131,10 @@ if BUILD_VP8_DECODER
 unittest_SOURCES += vaapidecoder_vp8_unittest.cpp
 endif
 
+if BUILD_VP9_DECODER
+unittest_SOURCES += vaapidecoder_vp9_unittest.cpp
+endif
+
 unittest_LDFLAGS = \
 	$(GTEST_LDFLAGS) \
 	$(NULL)
