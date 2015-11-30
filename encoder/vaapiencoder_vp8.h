@@ -53,6 +53,8 @@ protected:
     virtual Encode_Status doEncode(const SurfacePtr&, uint64_t timeStamp, bool forceKeyFrame = false);
 
 private:
+    friend class VaapiEncoderVP8Test;
+
     Encode_Status encodePicture(const PicturePtr&);
     bool fill(VAEncSequenceParameterBufferVP8*) const;
     bool fill(VAEncPictureParameterBufferVP8*, const PicturePtr&, const SurfacePtr&) const ;
