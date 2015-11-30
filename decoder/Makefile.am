@@ -115,6 +115,26 @@ unittest_SOURCES = \
 	$(top_builddir)/common/unittest_main.cpp \
 	$(NULL)
 
+if BUILD_H264_DECODER
+unittest_SOURCES += vaapidecoder_h264_unittest.cpp
+endif
+
+if BUILD_H265_DECODER
+unittest_SOURCES += vaapidecoder_h265_unittest.cpp
+endif
+
+if BUILD_JPEG_DECODER
+unittest_SOURCES += vaapidecoder_jpeg_unittest.cpp
+endif
+
+if BUILD_VP8_DECODER
+unittest_SOURCES += vaapidecoder_vp8_unittest.cpp
+endif
+
+if BUILD_VP9_DECODER
+unittest_SOURCES += vaapidecoder_vp9_unittest.cpp
+endif
+
 unittest_LDFLAGS = \
 	$(GTEST_LDFLAGS) \
 	$(NULL)

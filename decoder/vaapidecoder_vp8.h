@@ -65,7 +65,10 @@ class VaapiDecoderVP8:public VaapiDecoderBase {
     /* decoding functions */
     Decode_Status decodePicture();
     void updateReferencePictures();
+
   private:
+    friend class VaapiDecoderVP8Test;
+
     PicturePtr m_currentPicture;
     PicturePtr m_lastPicture;
     PicturePtr m_goldenRefPicture;

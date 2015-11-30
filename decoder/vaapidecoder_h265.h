@@ -54,6 +54,8 @@ public:
     virtual Decode_Status decode(VideoDecodeBuffer*);
 
 private:
+    friend class VaapiDecoderH265Test;
+
     class DPB {
         typedef VaapiDecoderH265::RefSet     RefSet;
         typedef std::tr1::function<Decode_Status (const PicturePtr&)> OutputCallback;
