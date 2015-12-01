@@ -34,7 +34,7 @@
 #include <string.h>
 extern int yamiLogFlag;
 extern FILE* yamiLogFn;
-extern int isIni;
+extern int isInit;
 
 #define YAMI_LOG_ERROR 0x1
 #define YAMI_LOG_WARNING 0x2
